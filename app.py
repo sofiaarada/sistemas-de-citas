@@ -4,7 +4,11 @@ from datetime import datetime
 
 from flask import Flask, flash, redirect, render_template, request, url_for
 from mysql.connector import Error
+from dotenv import load_dotenv
 
+load_dotenv()
+
+app = Flask(__name__)
 from config import settings
 from database import execute, fetch_all, fetch_one
 
