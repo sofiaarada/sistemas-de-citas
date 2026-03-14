@@ -8,9 +8,6 @@ import mysql.connector
 from config import settings
 
 
-def get_connection():
-    return mysql.connector.connect(**settings.mysql_config())
-    
 @contextmanager
 def get_cursor(dictionary: bool = False) -> Generator[tuple[Any, Any], None, None]:
     connection = mysql.connector.connect(**settings.mysql_config())
