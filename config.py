@@ -28,9 +28,9 @@ def _get_int(name: str, default: int) -> int:
 class Settings:
     secret_key: str = os.getenv("SECRET_KEY", "change-this-secret-key")
     db_host: str = os.getenv("DB_HOST", "localhost")
-    db_port: int = _get_int("DB_PORT", 3306)
+    db_port: int = _get_int("DB_PORT", 3300)
     db_user: str = os.getenv("DB_USER", "root")
-    db_password: str = os.getenv("DB_PASSWORD", "")
+    db_password: str = os.getenv("DB_PASSWORD", "1044216237")
     db_name: str = os.getenv("DB_NAME", "eps_citas_db")
 
     def mysql_config(self) -> dict[str, object]:
